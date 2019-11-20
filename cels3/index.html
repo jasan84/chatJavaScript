@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Celulares</title>
+
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+	<div id="celu1">
+
+		
+				<div id="parlante1">
+				</div>
+
+				<div id="cam1">
+				</div>
+				
+		
+
+		<article >
+			<header id="barra1">
+				<p id="hora"> 19:45 </p>
+				<img id="señal" src="images/signal.png"/>
+			</header>
+
+			<header id="chathdr1">
+				<img id="userimg1" src="images/user.png"/>
+				<p id="usertit1"> Usuario 1 </p>
+			</header>
+
+			<div id="chat1">
+			</div>
+
+			<div id="control1">
+
+				<form id="form1" name="formulario">
+					<input id="input1" type="text" name="texto" value="">
+				</form>
+
+				<image onclick="enviarimagen();" id="botcam1" src="images/camera.png">
+				</image>
+
+				<image onclick="enviartexto();"id="botsend1" src="images/send.png">
+				</image>
+
+			</div>
+
+		</article>
+
+		<div>
+				<div id="boton1">
+				</div>
+		</div>
+
+	</div>
+
+
+	
+<!-- ******************************************** CELULAR 2 ********************************************  -->
+
+
+	<div id="celu2">
+
+		
+				<div id="parlante2">
+				</div>
+
+				
+				<div id="cam1">
+				</div>
+				
+		
+
+		<article >
+			<header id="barra2">
+				<p id="hora"> 19:45 </p>
+				<img id="señal" src="images/signal.png"/>
+			</header>
+
+			<header id="chathdr2">
+				<img id="userimg2" src="images/user.png"/>
+				<p id="usertit2"> Usuario 2 </p>
+			</header>
+
+			<div id="chat2">
+			</div>
+
+			<div id="control2">
+
+				<form id="form2">
+					<input id="input2" type="text" name="texto" value="">
+				</form>
+				
+				<image onclick="enviarimagen2();" id="botcam2" src="images/camera.png">
+				</image>
+
+				<image onclick="enviartexto2();" id="botsend2" src="images/send.png">
+				</form>
+			</div>
+
+		</article>
+
+		<div>
+				<div id="boton2">
+				</div>
+		</div>
+
+	</div>
+
+	
+
+	<script>
+				function enviartexto(){
+
+					var enviar1 = document.getElementById("input1").value;
+					var enviado1 = document.getElementById("chat1");
+					var recibido1 = document.getElementById("chat2");
+
+					if (enviar1==("")){
+						alert("No hay mensaje para enviar")
+					}
+
+					else{
+
+					enviado1.innerHTML+= "<p id=menviado1>" + enviar1 + "</p>";
+					recibido1.innerHTML+= "<p id=menrecibido1>" + enviar1 + "</p>";
+						}
+
+					}
+
+
+
+
+				function enviartexto2(){
+					var enviar2 = document.getElementById("input2").value;
+					var enviado2 = document.getElementById("chat2");
+					var recibido2 = document.getElementById("chat1");
+
+					if (enviar2 == ("")){
+						alert ("No hay mensaje para enviar");
+										}
+
+				else{
+
+					enviado2.innerHTML+= "<p id=menviado2>" + enviar2 + "</p>";
+					recibido2.innerHTML+= "<p id=menrecibido2>" + enviar2 + "</p>";
+					}
+				}
+
+
+				function enviarimagen(){
+					var imagen1 = document.getElementById("chat1");
+					var imagenviada = document.getElementById("chat2")
+
+					imagen1.innerHTML+= "<image id=imgenviado src=images/smile.png>"; 
+					imagenviada.innerHTML+= "<image id=imagrecibido src=images/smile.png>";
+				}
+
+				function enviarimagen2(){
+					var imagen1 = document.getElementById("chat2");
+					var imagenviada = document.getElementById("chat1")
+
+					imagen1.innerHTML+= "<image id=imgenviado2 src=images/tongue_smile.png>"; 
+					imagenviada.innerHTML+= "<image id=imgrecibido2 src=images/tongue_smile.png>";
+				}
+
+			</script>
+
+
+
+	</body>
+</html>
+
+
