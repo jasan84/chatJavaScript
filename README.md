@@ -1,6 +1,6 @@
 # chatJavaScript
 
-<b>Primer ejercicio de curso ComIt. </b>
+<b>Primer ejercicio de curso ComIt. Ago-2019 </b>
 
 Representación de dos celulares que envían mensajes entre sí.
 
